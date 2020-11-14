@@ -8,10 +8,13 @@
 <h5 style="text-transform: capitalize">{{char.name}}</h5>
 
 
+
 </li>
 </ul> 
 
-<!-- <TeamsDivided/> -->
+
+
+
 
     </div>
    
@@ -19,7 +22,7 @@
 </template>
 
 <script>
-// import TeamsDivided from './TeamsDivided'
+
 import { mapGetters } from 'vuex'
 import Face from './CharacterFace';
 
@@ -28,7 +31,7 @@ name: "Characters",
 computed: mapGetters(["allCharacters", "getmainUIState"]),
 components: {
     Face,
-    // TeamsDivided
+   
 }
 }
 </script>

@@ -2,7 +2,9 @@ const state = {
 
     characters: [
 
-    ]
+    ],
+
+    teams: []
     
 };
 
@@ -10,6 +12,7 @@ const getters = {
 
     allCharacters: (state) => state.characters,
     countCharacters: (state) => state.characters.length,
+    teams: (state) => state.teams
 
 
 };
@@ -56,8 +59,11 @@ const actions = {
             result.push(characters.splice(0, Math.ceil(characters.length / i)));
         }
 
-        console.log(result);
-        commit("sortTeams");
+      
+        commit("setTeams", result);
+
+        console.log(state.teams)
+        
     }
 
 
@@ -68,21 +74,9 @@ const actions = {
 const mutations = {
     resetCharacters: (state) => state.characters.splice(0, state.characters.length),
     setCharacters: (state, characters) => (state.characters = characters),
+    setTeams: (state, teams) => (state.teams = teams),
     newCharacter: (state, character) => state.characters.unshift(character),
-    sortTeams: (state) => state.characters.sort((a, b) => parseFloat(a.team) - parseFloat(b.team)),
-    setTeam: (state, characterId, teamnumber) => {
-        if (characterId === 1) {
-            return;
-        }
-        state.characters.forEach(char => {
-
-            if (char.id === characterId) {
-                char.team = teamnumber;
-            }
-
-        });
-
-    }
+    sortTeams: (state) => state.characters.sort((a, b) => parseFloat(a.team) - parseFloat(b.team))    
 };
 
 export default {

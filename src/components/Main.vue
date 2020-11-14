@@ -13,11 +13,13 @@
    <div class="col-12 mt-2" style="min-height:500px; background: #557DB8">
    <h3 v-if="countCharacters > 0">{{countCharacters}} players</h3>   
    <Characters/>
+   <TeamsDivided/>
   </div>
 </div>
 </template>
 
 <script>
+import TeamsDivided from './TeamsDivided'
 import TeamSelector from './TeamsSelector'
 import AddCharacters from './AddCharacter'
 import ResetCharacters from './ResetCharacters'
@@ -36,7 +38,7 @@ export default {
     ]), 
     
     },
-  components: { Characters, AddCharacters, CreateTeams, ResetCharacters, TeamSelector},
+  components: { Characters, AddCharacters, CreateTeams, ResetCharacters, TeamSelector, TeamsDivided},
   name: 'MainPage',    
   data(){
     return{
