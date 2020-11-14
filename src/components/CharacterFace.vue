@@ -6,6 +6,7 @@
       </div>
       <div class="mouth"><div class="lips"><div class="tongue"></div></div></div>
   </div>
+  
 </template>
 
 <script>
