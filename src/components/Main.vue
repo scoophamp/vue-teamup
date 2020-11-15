@@ -13,6 +13,7 @@
    <div class="col-12 mt-2" style="min-height:500px; background: #557DB8">
    <h3 v-if="countCharacters > 0">{{countCharacters}} players</h3>   
    <Characters/>
+    <h3 v-if="countCharacters > 0">Teams</h3>  
    <TeamsDivided/>
   </div>
 </div>

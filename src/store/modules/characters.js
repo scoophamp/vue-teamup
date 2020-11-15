@@ -5,7 +5,7 @@ const state = {
     ],
 
     teams: []
-    
+
 };
 
 const getters = {
@@ -55,20 +55,18 @@ const actions = {
 
     },
 
-     splitIntoTeams({
+    splitIntoTeams({
         commit
     }, numberOfTeams) {
 
         const characters = [...state.characters];
 
-       
-            for (var i = characters.length - 1; i > 0; i--) {
-                var j = Math.floor(Math.random() * (i + 1));
-                var temp = characters[i];
-                characters[i] = characters[j];
-                characters[j] = temp;
-            }
-        
+        for (var i = characters.length - 1; i > 0; i--) {
+            var j = Math.floor(Math.random() * (i + 1));
+            var temp = characters[i];
+            characters[i] = characters[j];
+            characters[j] = temp;
+        }
 
 
         let result = [];
@@ -76,11 +74,9 @@ const actions = {
             result.push(characters.splice(0, Math.ceil(characters.length / i)));
         }
 
-      
+
         commit("setTeams", result);
 
-        console.log(state.teams)
-        
     }
 
 
@@ -94,7 +90,7 @@ const mutations = {
     setCharacters: (state, characters) => (state.characters = characters),
     setTeams: (state, teams) => (state.teams = teams),
     newCharacter: (state, character) => state.characters.unshift(character),
-    sortTeams: (state) => state.characters.sort((a, b) => parseFloat(a.team) - parseFloat(b.team))    
+    sortTeams: (state) => state.characters.sort((a, b) => parseFloat(a.team) - parseFloat(b.team))
 };
 
 export default {
