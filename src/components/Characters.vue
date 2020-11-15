@@ -66,12 +66,6 @@ components: {
 
 }
 
-.generatedteams{
-
-background:green!important;
-
-}
-
 .list-group-item{
     background:#557DB8!important;
     color:white;

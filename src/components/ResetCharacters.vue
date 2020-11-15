@@ -8,11 +8,12 @@ import { mapActions } from 'vuex'
 export default {
  
   methods:{
-    ...mapActions(["resetCharacters", "setUIState"]),
+    ...mapActions(["resetCharacters", "resetTeams", "setUIState"]),
 
     onReset(e){
         e.preventDefault();
-        this.resetCharacters()
+        this.resetCharacters();
+        this.resetTeams();
         this.setUIState("normal")
     },
    

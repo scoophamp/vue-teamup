@@ -1,7 +1,7 @@
 <template>
 <div>
 
-<button @click="onSortTeam">Team Up ! </button>
+<button @click="onSortTeam">Randomize Teams ! </button>
 
 </div>
   
