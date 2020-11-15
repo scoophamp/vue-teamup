@@ -1,9 +1,11 @@
 <template>
-    <div class="container">
+    <div class="">
       <ul class="list-group-flush list-group-horizontal row w-100 p-0"> 
-<li v-for="char in allCharacters" :key="char.id" class="character list-group-item col-sm-4 col-6 col-md-3 col-xl-2 border-0">
+<li v-for="char in allCharacters" :key="char.id" class="character list-group-item">
 
-<div class="w-100 d-flex justify-content-center"><div class="minion" :class="getmainUIState"><Face/></div></div>
+<!-- <div class="w-100 d-flex justify-content-center">
+    <div class="minion" :class="getmainUIState"><Face/></div>
+    </div> -->
 
 <h5 style="text-transform: capitalize">{{char.name}}</h5>
 
@@ -24,19 +26,19 @@
 <script>
 
 import { mapGetters } from 'vuex'
-import Face from './CharacterFace';
+// import Face from './CharacterFace';
 
 export default {
 name: "Characters",
 computed: mapGetters(["allCharacters", "getmainUIState"]),
 components: {
-    Face,
+    // Face,
    
 }
 }
 </script>
 
-<style>
+<style scoped>
 
 @keyframes float {
 	0% {

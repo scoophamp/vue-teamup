@@ -69,12 +69,14 @@ const actions = {
         }
 
 
+
         let result = [];
         for (let i = numberOfTeams; i > 0; i--) {
+           
+            result
             result.push(characters.splice(0, Math.ceil(characters.length / i)));
         }
-
-
+        
         commit("setTeams", result);
 
     }
