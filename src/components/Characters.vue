@@ -1,8 +1,9 @@
 <template>
     <div class="">
-      <ul class="list-group-flush list-group-horizontal row w-100 p-0"> 
+    
+          <transition-group name="bounce" tag="ul" class="list-group-flush list-group-horizontal row w-100 p-0">
 <li v-for="char in allCharacters" :key="char.id" class="character list-group-item">
-
+ 
 <!-- <div class="w-100 d-flex justify-content-center">
     <div class="minion" :class="getmainUIState"><Face/></div>
     </div> -->
@@ -12,7 +13,8 @@
 
 
 </li>
-</ul> 
+</transition-group>
+
 
 
 
@@ -82,5 +84,25 @@ components: {
     transform: translatey(0px);
     -webkit-animation: float 6s ease-in-out infinite;
     animation: float 6s ease-in-out infinite;
+}
+
+.bounce-enter-active {
+  animation: bounce-in .9s;
+}
+.bounce-leave-active {
+  animation: bounce-in .5s reverse;
+}
+@keyframes bounce-in {
+  0% {
+    transform: scale(0);
+    font-weight: bold;
+  }
+  50% {
+    transform: scale(1.2);
+    font-weight: bold;
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 </style>

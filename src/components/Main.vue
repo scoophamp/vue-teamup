@@ -11,9 +11,14 @@
    <CreateTeams v-if="countCharacters > 0"/>
    </div>
    <div class="col-12 mt-2" style="min-height:500px; background: #557DB8">
-   <h3 v-if="countCharacters > 0">{{countCharacters}} players</h3>   
+     <transition name="fade">
+   <h3 v-if="countCharacters > 0">{{countCharacters}} players</h3>  
+   </transition> 
    <Characters/>
-    <h3 v-if="countCharacters > 0">Teams</h3>  
+   <transition name="fade">
+     <h3 v-if="countCharacters > 0">Teams</h3>  
+  </transition>
+   
    <TeamsDivided/>
   </div>
 </div>
@@ -50,4 +55,11 @@ export default {
 
 }
 </script>
-
+<style scoped>
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .9s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
+</style>
