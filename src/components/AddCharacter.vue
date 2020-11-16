@@ -45,7 +45,7 @@ methods:{
 <style scoped>
 
 .submitPlayerName{
-    width: 290px;
+   
     text-transform:capitalize;
     background: #15B4BC;
     font-weight: bold;

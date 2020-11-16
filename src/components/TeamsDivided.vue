@@ -1,14 +1,14 @@
 <template>
   <div class="row">    
   
-    <div ref="team" v-for="(team, index) in teams" :style="randomColor" :key="index" class="col team">
-      <h4 class="text-white bg-dark">{{ randomTeamName() }}</h4>
+    <div ref="team" v-for="(team, index) in teams" :style="team.teamColor" :key="index" class="col team p-0 border border-dark">
+      <h4 class="text-white bg-dark border-right">{{ randomTeamName() }}</h4>
       <!-- {{generator()}} -->
       
-          <transition-group name="slide-fade" tag="ul" class="list-group-flush">
+          <transition-group name="slide-fade" tag="ul" class="list-group-flush p-0">
         <li v-for="(player, index) in team" :key="player.id" class="list-group-item">
-         <h4 class="text-white">{{ player.name }}</h4>
-         <span class="text-white" v-if="index === 0">(Team Captain)</span>
+         <h4 class="text-white">{{ player.name }} <span class="text-white" v-if="index === 0">(Team Captain)</span></h4>
+        
         </li>
           </transition-group>
     </div>
@@ -44,6 +44,8 @@ export default {
 .list-group-item{
   background: transparent!important;
 }
+
+
 
 h4{
   text-transform: capitalize;

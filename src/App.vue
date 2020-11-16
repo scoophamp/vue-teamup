@@ -26,6 +26,10 @@ export default {
   
 }
 
+.list-group-item{
+  border:none!important;
+}
+
 html{
   background: #333E5D;
 }

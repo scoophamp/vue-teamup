@@ -73,12 +73,17 @@ const actions = {
         let result = [];
         for (let i = numberOfTeams; i > 0; i--) {
            
-            result
             result.push(characters.splice(0, Math.ceil(characters.length / i)));
         }
+
+        result.forEach(element => {
+            
+            element.teamColor = 'background:' + '#'+(Math.random()*0xFFFFFF<<0).toString(16) + '!important'; 
+        });
         
         commit("setTeams", result);
 
+        console.log(result)
     }
 
 
