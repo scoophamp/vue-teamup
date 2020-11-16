@@ -1,9 +1,9 @@
 <template>
   <div class="d-flex flex-row justify-content-center mb-4">
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-center">
       <button
         @click="onMinusClicked"
-        class="teamsBtn minus font-weight-bold rounded-circle"
+        class="teamsBtn minus font-weight-bold"
       >
         -
       </button>
@@ -14,11 +14,11 @@
         oninput="validity.valid||(value='');"
         :value="numberOfTeams"
         id="teamsInput"
-        class="mr-2 ml-2 text-center bg-white text-dark"
+        class="text-center bg-white text-dark"
       />
       <button
         @click="onPlusClicked"
-        class="teamsBtn plus font-weight-bold rounded-circle"
+        class="teamsBtn plus font-weight-bold"
       >
         +
       </button>

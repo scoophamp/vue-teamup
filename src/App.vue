@@ -21,7 +21,7 @@ export default {
  font-weight: 300;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  margin-top: 33px;
   overflow-x:hidden;
   
 }
