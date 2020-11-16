@@ -3,7 +3,7 @@
 <div class="row text-center" style="background:#E2BC56">
    <h3 class="col-12 mb-2 teamsHeader">How many teams?</h3>
    <div class="col-12"> <TeamSelector/></div> 
-   <h3 class="col-12 mb-2 teamsHeader">Who is competing?</h3>  
+   <h3 class="col-12 mb-2 teamsHeader">Who participates?</h3>  
    <div class="col-12 mb-2"><AddCharacters /> </div>    
    
    <div class="col-12 d-flex justify-content-center">
@@ -16,7 +16,7 @@
    </transition> 
    <Characters/>
    <transition name="fade">
-     <h3 v-if="countCharacters > 0">Teams</h3>  
+     <h3 v-if="teams.length > 0">Teams</h3>  
   </transition>
    
    <TeamsDivided/>
@@ -40,7 +40,8 @@ export default {
    computed: {   
     ...mapGetters([
       'allCharacters',
-      'countCharacters',     
+      'countCharacters',
+      'teams'     
     ]), 
     
     },

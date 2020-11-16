@@ -2,7 +2,7 @@
   <div>
 <form @submit="onSubmit">
 
-<input @keyup="onChange" ref="addChar" v-model="title" maxlength="12" autofocus  type="text" class="submitPlayerName" placeholder="Playername...">
+<input @keyup="onChange" ref="addChar" v-model="title" maxlength="12" autofocus  type="text" class="submitPlayerName" placeholder="Name...">
 
 <button type="submit" :disabled="titleEmpty">+ Add player</button>
 
@@ -45,7 +45,8 @@ methods:{
 <style scoped>
 
 .submitPlayerName{
-    text-transform:uppercase;
+    width: 290px;
+    text-transform:capitalize;
     background: #15B4BC;
     font-weight: bold;
     outline:none;
